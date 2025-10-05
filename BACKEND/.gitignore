@@ -1,0 +1,18 @@
+# Node.js
+node_modules/
+dist/
+build/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+logs/
+
+# Storage (user images)
+storage/
+
+# OS generated files
+.DS_Store
+*.swp

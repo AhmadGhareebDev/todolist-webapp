@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.3s ease-out;
+}
+
+@utility no-scrollbar {
+  @apply [scrollbar-width:none] [&::-webkit-scrollbar]:hidden;
+}
+/* Tailwind v4 Theme Configuration */
+@theme {
+  /* Color Palette - Modern, Light & Clean */
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+
+  --color-secondary-50: #faf5ff;
+  --color-secondary-100: #f3e8ff;
+  --color-secondary-200: #e9d5ff;
+  --color-secondary-300: #d8b4fe;
+  --color-secondary-400: #c084fc;
+  --color-secondary-500: #a855f7;
+  --color-secondary-600: #9333ea;
+  --color-secondary-700: #7c3aed;
+  --color-secondary-800: #6b21a8;
+  --color-secondary-900: #581c87;
+
+  --color-accent-50: #ecfdf5;
+  --color-accent-100: #d1fae5;
+  --color-accent-200: #a7f3d0;
+  --color-accent-300: #6ee7b7;
+  --color-accent-400: #34d399;
+  --color-accent-500: #10b981;
+  --color-accent-600: #059669;
+  --color-accent-700: #047857;
+  --color-accent-800: #065f46;
+  --color-accent-900: #064e3b;
+
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+
+  --color-danger-50: #fef2f2;
+  --color-danger-100: #fee2e2;
+  --color-danger-200: #fecaca;
+  --color-danger-300: #fca5a5;
+  --color-danger-400: #f87171;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+  --color-danger-800: #991b1b;
+  --color-danger-900: #7f1d1d;
+
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-200: #bbf7d0;
+  --color-success-300: #86efac;
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-success-800: #166534;
+  --color-success-900: #14532d;
+}
+
+/* Custom component classes using standard Tailwind utilities */
+@layer components {
+  .sidebar {
+    @apply bg-slate-50;
+  }
+  
+  .sidebar-item {
+    @apply bg-sky-50 hover:bg-sky-100 text-slate-700 hover:text-sky-600;
+  }
+  
+  .sidebar-item-active {
+    @apply bg-sky-200 text-sky-700;
+  }
+  
+  .form-input {
+    @apply bg-sky-50 border border-sky-300 focus:border-sky-500 focus:ring-2 focus:ring-sky-200;
+  }
+  
+  .form-input-error {
+    @apply bg-red-50 border border-red-400 focus:border-red-500 focus:ring-2 focus:ring-red-200;
+  }
+  
+  .btn-primary {
+    @apply bg-sky-400 hover:bg-sky-500 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-violet-400 hover:bg-violet-500 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200;
+  }
+  
+  .btn-success {
+    @apply bg-green-400 hover:bg-green-500 text-white font-medium px-6 py-2 rounded-md transition-colors duration-200;
+  }
+  
+  .page-background {
+    @apply bg-violet-100;
+  }
+  
+  .card {
+    @apply bg-white border border-slate-200 rounded-lg shadow-sm;
+  }
+}
