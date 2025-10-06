@@ -74,8 +74,6 @@ Create a `.env` file in the BACKEND folder with the following variables (replace
 
 Start the backend server:
 ```bash
-npm start
-# or for development with nodemon (if configured)
 npm run dev
 ```
 
